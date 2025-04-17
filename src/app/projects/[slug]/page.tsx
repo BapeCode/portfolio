@@ -2,6 +2,7 @@ import {
   getProjectBySlug,
   getNextProject,
   getPreviousProject,
+  getAllProjects,
 } from "@/lib/projects";
 import { ArrowLeft, ArrowRight, Github } from "lucide-react";
 import Link from "next/link";
@@ -14,7 +15,15 @@ type PageProps = {
   };
 };
 
-export default function ProjectPage({ params }: PageProps) {
+export async function generateStaticParams() {
+  const projects = getAllProjects();
+
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
+export default async function ProjectPage({ params }: PageProps) {
   const projet = getProjectBySlug(params.slug);
 
   if (!projet) {
