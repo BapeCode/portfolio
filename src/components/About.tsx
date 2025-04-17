@@ -11,8 +11,8 @@ export default function About() {
       </h1>
 
       <p className="text-sm text-secondary text-center md:text-left w-full">
-        Je m'appelle Mathieu Forest, j&apos;ai 20 ans et je suis actuellement
-        étudiant à la{" "}
+        Je m&apos;appelle Mathieu Forest, j&apos;ai 20 ans et je suis
+        actuellement étudiant à la{" "}
         <Link
           href="https://guardia.school/"
           className="text-destructive underline"
@@ -20,10 +20,10 @@ export default function About() {
           Guardia CyberSecurity School
         </Link>{" "}
         à Lyon. Depuis tout jeune, je suis fasciné par tout ce qui touche à
-        l&apos;informatique. Ce qui a commencé par de la curiosité sur "comment
-        fonctionne un ordi" est vite devenu une passion pour le développement,
-        les réseaux, les systèmes, les outils, et plus largement la logique
-        derrière tout ce qu'on utilise au quotidien.
+        l&apos;informatique. Ce qui a commencé par de la curiosité sur
+        &quot;comment fonctionne un ordi&quot; est vite devenu une passion pour
+        le développement, les réseaux, les systèmes, les outils, et plus
+        largement la logique derrière tout ce qu&apos;on utilise au quotidien.
         <br />
         <br />
         Aujourd&apos;hui, je me spécialise dans le développement web et la

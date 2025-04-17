@@ -1,8 +1,7 @@
 "use client";
-import { Button } from "./ui/button";
-import { Globe } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Navigation() {
   const [scrolled, setIsScrolled] = useState(false);
@@ -30,9 +29,11 @@ export default function Navigation() {
         }`}
       >
         <Link href={"/"}>
-          <img
+          <Image
             src="/logo.png"
             alt="Logo Mathieu Portfolio"
+            width={80}
+            height={80}
             className="h-20 w-auto"
           />
         </Link>

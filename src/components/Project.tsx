@@ -1,13 +1,10 @@
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-  CardFooter,
 } from "./ui/card";
-import { Badge } from "./ui/badge";
 import { getAllProjects } from "@/lib/projects";
 import Link from "next/link";
 import { Button } from "./ui/button";

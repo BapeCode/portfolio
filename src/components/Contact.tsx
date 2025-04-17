@@ -1,6 +1,3 @@
-import { Button } from "./ui/button";
-import { Github, Mail } from "lucide-react";
-
 export default function Contact() {
   return (
     <section
