@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #222632;
+  --foreground: #c3c1bd;
+  --muted: #2a2e3a;
+  --muted-foreground: #b7bccc;
+  --popover: #1c202d;
+  --popover-foreground: #e0ded8;
+  --card: #1f2330;
+  --card-foreground: #d1cfc9;
+  --border: #2f333f;
+  --input: #353a46;
+  --primary: #626873;
+  --primary-foreground: #ffffff;
+  --secondary: #c0c1c2;
+  --secondary-foreground: #262626;
+  --accent: #3d4454;
+  --accent-foreground: #ebedf5;
+  --destructive: #f5522b;
+  --destructive-foreground: #260400;
+  --ring: #626873;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-destructive: var(--destructive);
+  --color-ring: var(--ring);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted-foreground: var(--muted-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Archivo, sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .grid-background {
+    background-size: 32px 32px;
+    background-image: linear-gradient(var(--color-accent) 1px, transparent 1px),
+      linear-gradient(to right, var(--color-accent) 1px, transparent 1px);
+    mask-image: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(30, 30, 30, 0.8) 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(30, 30, 30, 0.8) 100%
+    );
+    border-bottom: 1px solid var(--color-border);
+  }
 }
