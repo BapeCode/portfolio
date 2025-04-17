@@ -27,10 +27,10 @@ export default function About() {
         <br />
         <br />
         Aujourd&apos;hui, je me spécialise dans le développement web et la
-        création de systèmes sur mesure, notamment sur FiveM où j'ai conçu un
-        framework personnalisé et plusieurs scripts interactifs pensés pour des
-        serveurs immersifs. Mais je m&apos;arrête pas là : je m&apos;intéresse
-        aussi à la cybersécurité, au reverse engineering, à
+        création de systèmes sur mesure, notamment sur FiveM où j&apos;ai conçu
+        un framework personnalisé et plusieurs scripts interactifs pensés pour
+        des serveurs immersifs. Mais je m&apos;arrête pas là : je
+        m&apos;intéresse aussi à la cybersécurité, au reverse engineering, à
         l&apos;automatisation avec Python, au réseau (AD, DNS, DHCP...), et plus
         récemment à l&apos;OSINT.
         <br />
