@@ -8,12 +8,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 
-type PageProps = {
-  params: {
-    slug: string;
-  };
-};
-
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const projet = getProjectBySlug(params.slug);
 
