@@ -8,13 +8,32 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 
-interface ProjectPageProps {
+import { Metadata } from "next";
+
+interface ProjectParams {
   params: {
     slug: string;
   };
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
+export async function generateMetadata({
+  params,
+}: ProjectParams): Promise<Metadata> {
+  const projet = getProjectBySlug(params.slug);
+
+  if (!projet) {
+    return {
+      title: "Projet non trouvé",
+    };
+  }
+
+  return {
+    title: projet.title,
+    description: projet.overview,
+  };
+}
+
+export default function ProjectPage({ params }: ProjectParams) {
   const projet = getProjectBySlug(params.slug);
 
   if (!projet) {
