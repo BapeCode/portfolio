@@ -19,11 +19,11 @@ export default function Projects() {
         <h1 className="text-4xl font-bold uppercase text-primary-foreground text-center md:text-left w-full">
           🚀 Mes Projets
         </h1>
-        <p className="text-sm text-secondary text-center md:text-left w-full">
-          Plonger dans le développement, c'est comme hacker la réalité pour la
-          rendre plus simple, plus belle, ou carrément plus fun. Voici quelques
-          projets que j'ai réalisés au fil de mon apprentissage et de mon temps
-          libre, mêlant web, sécurité, logique et créativité.
+        <p className="text-sm text-foreground">
+          Plonger dans le développement, c&apos;est comme hacker la réalité pour
+          la rendre plus simple, plus belle, ou carrément plus fun. Voici
+          quelques projets que j&apos;ai réalisés au fil de mon apprentissage et
+          de mon temps libre, mêlant web, sécurité, logique et créativité.
         </p>
       </div>
 

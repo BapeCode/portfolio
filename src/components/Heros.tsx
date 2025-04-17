@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "./ui/button";
-import Link from "next/link";
+import Image from "next/image";
 
 export default function Heros() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -32,7 +32,13 @@ export default function Heros() {
 
       <div className="flex flex-col items-center justify-end">
         <div className="flex items-center gap-4 bg-card rounded-full p-20 border border-border">
-          <img src="/memoji_1.png" alt="Mathieu" className="w-32 h-32" />
+          <Image
+            src="/memoji_1.png"
+            alt="Mathieu"
+            width={128}
+            height={128}
+            className="w-32 h-32"
+          />
         </div>
       </div>
 
