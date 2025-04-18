@@ -10,15 +10,12 @@ import { Badge } from "@/components/ui/badge";
 
 import { Metadata } from "next";
 
-interface ProjectParams {
-  params: {
-    slug: string;
-  };
-}
+// Update the type definition to match Next.js 15's requirements
+type Props = {
+  params: { slug: string };
+};
 
-export async function generateMetadata({
-  params,
-}: ProjectParams): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const projet = getProjectBySlug(params.slug);
 
   if (!projet) {
@@ -33,7 +30,8 @@ export async function generateMetadata({
   };
 }
 
-export default function ProjectPage({ params }: ProjectParams) {
+// Update the page component to use the same Props type
+export default function ProjectPage({ params }: Props) {
   const projet = getProjectBySlug(params.slug);
 
   if (!projet) {
