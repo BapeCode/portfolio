@@ -10,12 +10,16 @@ import { Badge } from "@/components/ui/badge";
 
 import { Metadata } from "next";
 
-// Update the type definition to match Next.js 15's requirements
-type Props = {
-  params: { slug: string };
-};
+// In Next.js 15, we need to handle params differently
+interface PageParams {
+  slug: string;
+}
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: PageParams;
+}): Promise<Metadata> {
   const projet = getProjectBySlug(params.slug);
 
   if (!projet) {
@@ -30,8 +34,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// Update the page component to use the same Props type
-export default function ProjectPage({ params }: Props) {
+// For the page component, make it async to match Next.js 15's expectations
+export default async function ProjectPage({ params }: { params: PageParams }) {
   const projet = getProjectBySlug(params.slug);
 
   if (!projet) {
@@ -43,6 +47,7 @@ export default function ProjectPage({ params }: Props) {
 
   return (
     <main className="max-w-5xl mx-auto px-4 overflow-x-hidden">
+      {/* Your existing JSX remains the same */}
       <section className="flex flex-col items-start justify-start gap-4 py-20 border-b border-border">
         <div className="flex flex-row justify-between items-center w-full">
           <Link
@@ -63,6 +68,7 @@ export default function ProjectPage({ params }: Props) {
           )}
         </div>
 
+        {/* Rest of your JSX remains unchanged */}
         <div className="flex items-center justify-center w-full">
           <h3 className="text-3xl font-bold text-primary-foreground text-center md:text-left">
             {projet.title}
