@@ -36,7 +36,8 @@ export async function generateMetadata({
 
 // For the page component, make it async to match Next.js 15's expectations
 export default async function ProjectPage({ params }: { params: PageParams }) {
-  const projet = getProjectBySlug(params.slug);
+  const { slug } = await params;
+  const projet = getProjectBySlug(slug);
 
   if (!projet) {
     notFound();
