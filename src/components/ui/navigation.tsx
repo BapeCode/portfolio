@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 import { createContext, useContext, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link, { LinkProps } from "next/link";
-import { usePathname } from "next/navigation";
 
 interface NavigationLink {
   name: string;
