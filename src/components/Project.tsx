@@ -12,8 +12,9 @@ export default function Projects() {
         Mes Projects
       </h1>
       <p className="text-lg md:text-xl text-white/80 text-center">
-        Voici quelques projets que j'ai réalisés au fil de mon apprentissage et
-        de mon temps libre, mêlant web, sécurité, logique et créativité.
+        Voici quelques projets que j&apos;ai réalisés au fil de mon
+        apprentissage et de mon temps libre, mêlant web, sécurité, logique et
+        créativité.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">

@@ -27,8 +27,8 @@ export default function Heros() {
         </p>
 
         <p className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed text-center">
-          J'aime construire des expériences digitales avec des technologies
-          modernes. J'aime écrire du code propre, intuitif et innovant.
+          J&apos;aime construire des expériences digitales avec des technologies
+          modernes. J&apos;aime écrire du code propre, intuitif et innovant.
         </p>
       </div>
 
