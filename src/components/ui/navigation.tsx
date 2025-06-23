@@ -102,7 +102,6 @@ export const MobileNavigation = ({
   ...props
 }: React.ComponentProps<"div">) => {
   const { open, setOpen } = useNavigation();
-  const pathname = usePathname();
 
   return (
     <>
