@@ -50,9 +50,9 @@ export default function About() {
           <p className="text-md md:text-lg text-white/80">
             Je m&apos;appelle Mathieu Forest, j&apos;ai 20 ans et j&apos;étudie
             actuellement à la <strong>Guardia CyberSecurity School</strong> à
-            Lyon. Depuis petit, l&apos;informatique me passionne — de "comment
-            fonctionne un ordi" à la création de systèmes web et d&apos;outils
-            personnalisés.
+            Lyon. Depuis petit, l&apos;informatique me passionne — de
+            &quot;comment fonctionne un ordi&quot; à la création de systèmes web
+            et d&apos;outils personnalisés.
             <br />
             <br />
             Aujourd&apos;hui, je me spécialise dans le développement web.
