@@ -66,7 +66,7 @@ export default function Navigation({
   );
 }
 
-export const NavigationBody = (props: any) => {
+export const NavigationBody = (props: React.ComponentProps<"div">) => {
   return (
     <>
       <DesktopNavigation {...(props as React.ComponentProps<"div">)} />
@@ -156,7 +156,10 @@ export const NavigationLinks = ({
   className?: string;
   props?: LinkProps;
 }) => {
-  const handleScroll = (e: any, id: string) => {
+  const handleScroll = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    id: string
+  ) => {
     e.preventDefault();
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
