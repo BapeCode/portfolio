@@ -1,12 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { useMobile } from "@/hooks/useMobile";
 import Navigation, { NavigationBody, NavigationLinks } from "./ui/navigation";
 
 export default function NavigationComponent() {
-  const mobile = useMobile();
-  const [active, setActive] = useState(false);
   const nav = [
     {
       name: "About Me",

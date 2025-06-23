@@ -1,10 +1,3 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
 import { getAllProjects } from "@/lib/projects";
 import Link from "next/link";
 import { Button } from "./ui/button";

@@ -1,18 +1,10 @@
 "use client";
 
 import { ArrowDown } from "lucide-react";
-import { Button } from "./ui/button";
-import Image from "next/image";
 import { socialNetworks } from "@/lib/social-network";
 import Link from "next/link";
 
 export default function Heros() {
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const element = document.getElementById("about");
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section
       id="heros"
