@@ -3,51 +3,17 @@
 :root {
   --background: #222632;
   --foreground: #c3c1bd;
-  --muted: #2a2e3a;
-  --muted-foreground: #b7bccc;
-  --popover: #1c202d;
-  --popover-foreground: #e0ded8;
-  --card: #1f2330;
-  --card-foreground: #d1cfc9;
-  --border: #2f333f;
-  --input: #353a46;
-  --primary: #626873;
-  --primary-foreground: #ffffff;
-  --secondary: #c0c1c2;
-  --secondary-foreground: #262626;
-  --accent: #3d4454;
-  --accent-foreground: #ebedf5;
-  --destructive: #f5522b;
-  --destructive-foreground: #260400;
-  --ring: #626873;
+  --primary: #1a1b3a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
-  --color-destructive: var(--destructive);
-  --color-ring: var(--ring);
-  --color-muted: var(--muted);
-  --color-card: var(--card);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-muted-foreground: var(--muted-foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(135deg, #131313 0%, #1a1b3a 50%, #131313 100%);
   color: var(--foreground);
   margin: 0;
   padding: 0;
@@ -56,6 +22,7 @@ body {
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  user-select: none;
 }
 
 @layer utilities {
@@ -74,5 +41,36 @@ body {
       rgba(30, 30, 30, 0.8) 100%
     );
     border-bottom: 1px solid var(--color-border);
+  }
+
+  .animate-jump {
+    animation: jump 1.5s ease-in-out infinite;
+  }
+
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .liquid {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  .liquid:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
   }
 }

@@ -16,7 +16,7 @@ export const projects: Project[] = [
   {
     id: 1,
     slug: "development-web",
-    title: "🌐 Développement Web",
+    title: "Développement Web",
     overview:
       "Conception et développement de sites web modernes, responsives, avec un focus sur la performance, la clarté du code et l’expérience utilisateur.",
     description:
@@ -52,7 +52,7 @@ export const projects: Project[] = [
   {
     id: 2,
     slug: "reverse-engineering",
-    title: "🛰️ Reverse Engineering – Projet badge RFID",
+    title: "Reverse Engineering – Projet badge RFID",
     overview:
       "Un système liant badge RFID, Arduino et API backend pour identifier des utilisateurs à partir de données physiques.",
     description:
@@ -88,7 +88,7 @@ export const projects: Project[] = [
   {
     id: 3,
     slug: "algorithmes-et-python",
-    title: "🧠 Algorithmes & Python",
+    title: "Algorithmes & Python",
     overview:
       "Série d’outils créés pour visualiser des algorithmes, renforcer ma logique, et expérimenter les capacités de Python dans des petits projets pratiques.",
     description:
@@ -123,7 +123,7 @@ export const projects: Project[] = [
   {
     id: 4,
     slug: "osint-et-cybersecurite",
-    title: "🔍 OSINT & Cybersécurité",
+    title: "OSINT & Cybersécurité",
     overview:
       "Exploration d’outils OSINT pour collecter, croiser et exploiter des données disponibles publiquement dans un cadre de sensibilisation ou d’audit.",
     description:
@@ -157,7 +157,7 @@ export const projects: Project[] = [
   {
     id: 5,
     slug: "network-infrastructure",
-    title: "🌐 Infrastructure Réseau",
+    title: "Infrastructure Réseau",
     overview:
       "Conception d’un réseau virtuel complet avec Windows Server, Active Directory, DNS, DHCP, le tout configuré sur des machines virtuelles.",
     description:
@@ -191,7 +191,7 @@ export const projects: Project[] = [
   {
     id: 6,
     slug: "design-ui-ux",
-    title: "🎨 UI/UX Design – Initiation & prototypage avec Figma",
+    title: "UI/UX Design – Initiation & prototypage avec Figma",
     overview:
       "Premiers pas dans le design d’interfaces avec Figma, en créant des maquettes web et des composants UI cohérents, modernes et adaptables à mes projets de développement.",
     description:

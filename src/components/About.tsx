@@ -1,55 +1,95 @@
-import Link from "next/link";
+import { Brain, Code, Figma, Power } from "lucide-react";
 
 export default function About() {
+  const cards = [
+    {
+      title: "Clean code",
+      description:
+        "J’écris du code clair, structuré et facile à maintenir — pour des projets qui durent et évoluent sans friction.",
+      icon: Code,
+    },
+    {
+      title: "Design Focus",
+      description:
+        "Je soigne l’expérience visuelle autant que le code. Mon but : créer des interfaces simples, élégantes et bien intégrées.",
+      icon: Figma,
+    },
+    {
+      title: "Performance",
+      description:
+        "J’optimise chaque projet pour qu’il soit rapide, fluide et agréable à utiliser, sur tous les supports.",
+      icon: Power,
+    },
+    {
+      title: "Continuous Learning",
+      description:
+        "Je reste curieux et à jour sur les technos. Apprendre, tester, progresser — ça fait partie du métier.",
+      icon: Brain,
+    },
+  ];
+
   return (
     <section
       id="about"
-      className="flex flex-col items-start justify-start gap-4 py-20 border-b border-border"
+      className="flex flex-col items-center justify-center gap-8 py-10 px-4"
     >
-      <h1 className="text-4xl font-bold uppercase text-primary-foreground text-center md:text-left w-full">
-        👋 À propos de moi
+      <h1 className="text-3xl md:text-4xl font-bold uppercase text-white text-center w-full">
+        À propos de moi
       </h1>
-
-      <p className="text-sm text-secondary text-center md:text-left w-full">
-        Je m&apos;appelle Mathieu Forest, j&apos;ai 20 ans et je suis
-        actuellement étudiant à la{" "}
-        <Link
-          href="https://guardia.school/"
-          className="text-destructive underline"
-        >
-          Guardia CyberSecurity School
-        </Link>{" "}
-        à Lyon. Depuis tout jeune, je suis fasciné par tout ce qui touche à
-        l&apos;informatique. Ce qui a commencé par de la curiosité sur
-        &quot;comment fonctionne un ordi&quot; est vite devenu une passion pour
-        le développement, les réseaux, les systèmes, les outils, et plus
-        largement la logique derrière tout ce qu&apos;on utilise au quotidien.
-        <br />
-        <br />
-        Aujourd&apos;hui, je me spécialise dans le développement web et la
-        création de systèmes sur mesure, notamment sur FiveM où j&apos;ai conçu
-        un framework personnalisé et plusieurs scripts interactifs pensés pour
-        des serveurs immersifs. Mais je m&apos;arrête pas là : je
-        m&apos;intéresse aussi à la cybersécurité, au reverse engineering, à
-        l&apos;automatisation avec Python, au réseau (AD, DNS, DHCP...), et plus
-        récemment à l&apos;OSINT.
-        <br />
-        <br />
-        J&apos;aime le code propre, les interfaces claires, le souci du détail,
-        et surtout : apprendre en construisant. Pour moi, un bon projet
-        c&apos;est pas juste quelque chose qui fonctionne — c&apos;est quelque
-        chose qui a du sens, qui est bien pensé, bien structuré et qui peut
-        évoluer.
-        <br />
-        <br />
-        En dehors du dev, je suis aussi passionné de jeux vidéo, de football, et
-        je ne rate jamais une occasion de voyager pour découvrir de nouveaux
-        environnements, nouvelles cultures… et parfois même trouver de
-        l&apos;inspiration. Que ce soit pour un projet web, une idée technique,
-        un système à construire ou juste une discussion autour de l&apos;IT, je
-        suis toujours ouvert aux échanges. Alors n&apos;hésite pas à me
-        contacter — on verra ce qu&apos;on peut créer ensemble.
+      <p className="text-lg md:text-xl text-white/80 text-center">
+        Je suis passionné par le développement web et la création de logiciels.
+        J'ai actuellement 4 ans d'expérience dans la création de projet web
+        moderne.
       </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full mt-6 gap-4">
+        <div className="liquid rounded-2xl p-6 flex flex-col items-start w-full gap-4">
+          <h1 className="text-2xl md:text-3xl font-bold text-white">
+            Ma présentation
+          </h1>
+
+          <p className="text-md md:text-lg text-white/80">
+            Je m'appelle Mathieu Forest, j'ai 20 ans et j'étudie actuellement à
+            la <strong>Guardia CyberSecurity School</strong> à Lyon. Depuis
+            petit, l'informatique me passionne — de "comment fonctionne un ordi"
+            à la création de systèmes web et d'outils personnalisés.
+            <br />
+            <br />
+            Aujourd’hui, je me spécialise dans le développement web. J’explore
+            aussi la cybersécurité, le reverse engineering, l’automatisation
+            avec Python, les réseaux, et plus récemment l’OSINT. J’aime le code
+            propre, les interfaces claires, et les projets qui ont du sens.
+            Construire, apprendre, améliorer — c’est ce qui me motive. Et quand
+            je ne suis pas devant mon éditeur, tu me trouveras sûrement en train
+            de jouer, de regarder un match, ou de voyager pour m’inspirer
+            ailleurs.
+            <br />
+            <br />
+            <strong>
+              Discutons ! Que ce soit pour un projet ou une idée technique, je
+              suis toujours partant.
+            </strong>
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center gap-4">
+          {cards.map((item, index) => {
+            return (
+              <div
+                className="border border-primary liquid rounded-2xl p-6 flex items-center gap-4 h-full"
+                key={index}
+              >
+                <div className="p-4 flex items-center">
+                  <item.icon className="h-6 w-6 text-white" />
+                </div>
+                <div className="flex flex-col items-start gap-1">
+                  <h1 className="text-xl font-bold text-white">{item.title}</h1>
+                  <p className="text-sm text-white/80">{item.description}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </section>
   );
 }

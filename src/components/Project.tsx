@@ -13,19 +13,42 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col items-start justify-start gap-4 py-20 border-b border-border"
+      className="flex flex-col items-center justify-center gap-8 py-10 px-4"
     >
-      <div className="flex flex-col gap-2">
-        <h1 className="text-4xl font-bold uppercase text-primary-foreground text-center md:text-left w-full">
-          🚀 Mes Projets
-        </h1>
-        <p className="text-sm text-foreground">
-          Plonger dans le développement, c&apos;est comme hacker la réalité pour
-          la rendre plus simple, plus belle, ou carrément plus fun. Voici
-          quelques projets que j&apos;ai réalisés au fil de mon apprentissage et
-          de mon temps libre, mêlant web, sécurité, logique et créativité.
-        </p>
+      <h1 className="text-3xl md:text-4xl font-bold uppercase text-white text-center w-full">
+        Mes Projects
+      </h1>
+      <p className="text-lg md:text-xl text-white/80 text-center">
+        Voici quelques projets que j'ai réalisés au fil de mon apprentissage et
+        de mon temps libre, mêlant web, sécurité, logique et créativité.
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+        {getAllProjects().map((item, index) => {
+          return (
+            <div
+              className="liquid rounded-2xl p-6 flex flex-col justify-between items-center gap-4"
+              key={index}
+            >
+              <h1 className="text-2xl font-bold text-white text-center">
+                {item.title}
+              </h1>
+              <p className="text-sm md:text-md text-white/80 text-center">
+                {item.overview}
+              </p>
+              <div className="flex flex-col items-center w-full gap-1">
+                <Link href={`/projects/${item.slug}`} className="w-full">
+                  <Button variant="ghost" className="w-full text-white">
+                    Voir le projet
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          );
+        })}
       </div>
+      {/* <div className="flex flex-col gap-2">
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
         {getAllProjects().map((item, index) => {
@@ -43,7 +66,7 @@ export default function Projects() {
             </Card>
           );
         })}
-      </div>
+      </div> */}
     </section>
   );
 }
