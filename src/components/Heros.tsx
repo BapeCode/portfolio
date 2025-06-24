@@ -23,7 +23,7 @@ export default function Heros() {
           Mathieu FOREST
         </h1>
         <p className="text-xl md:text-2xl text-white/60 mb-4 font-light text-center">
-          Développeur Full Stack & Etudient en CyberSecurity
+          Développeur Full Stack & Étudiant en CyberSecurity
         </p>
 
         <p className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed text-center">

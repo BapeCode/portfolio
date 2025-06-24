@@ -168,7 +168,7 @@ export const NavigationLinks = ({
   return (
     <div
       className={cn(
-        `flex flex-col md:flex-row items-center justify-center cursor-pointer hover:bg-white/50 hover:backdrop-blur-xl`,
+        `flex flex-col md:flex-row items-center justify-center cursor-pointer`,
         className
       )}
       onClick={(e) => handleScroll(e, link.href)}
@@ -177,7 +177,7 @@ export const NavigationLinks = ({
       <span
         className={cn(
           "text-sm transition-all duration-300 whitespace-pre",
-          `opacity-100 inline-block hover:text-gray-600 text-white`
+          `opacity-100 inline-block hover:text-white/80 text-white`
         )}
       >
         {link.name}

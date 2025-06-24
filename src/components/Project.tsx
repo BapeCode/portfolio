@@ -9,12 +9,11 @@ export default function Projects() {
       className="flex flex-col items-center justify-center gap-8 py-10 px-4"
     >
       <h1 className="text-3xl md:text-4xl font-bold uppercase text-white text-center w-full">
-        Mes Projects
+        Mes Projets
       </h1>
       <p className="text-lg md:text-xl text-white/80 text-center">
-        Voici quelques projets que j&apos;ai réalisés au fil de mon
-        apprentissage et de mon temps libre, mêlant web, sécurité, logique et
-        créativité.
+        Voici quelques projets que j&apos;ai réalisé au fil de mon apprentissage
+        et de mon temps libre, mêlant web, sécurité, logique et créativité.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
