@@ -1,6 +1,6 @@
-import About from "@/components/about";
-import Contact from "@/components/contact";
-import Heros from "@/components/heros";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Heros from "@/components/Heros";
 import Projects from "@/components/projects";
 import Service from "@/components/service";
 
