@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import NavigationComponent from "@/components/Navigation";
-import "./globals.css";
-import Footer from "@/components/Footer";
+import NavigationComponent from "@/components/navigation/Navigation";
+import "./globals.scss";
 
 export const metadata: Metadata = {
   title: "Portfolio - Mathieu",
@@ -21,7 +20,6 @@ export default function RootLayout({
       <body>
         <NavigationComponent />
         {children}
-        <Footer />
       </body>
     </html>
   );

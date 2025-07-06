@@ -1,96 +1,75 @@
-import { Brain, Code, Figma, Power } from "lucide-react";
+import "../app/globals.scss";
 
 export default function About() {
-  const cards = [
+  const skills = [
     {
-      title: "Clean code",
+      name: "Front-End & Back-End",
       description:
-        "J’écris du code clair, structuré et facile à maintenir — pour des projets qui durent et évoluent sans friction.",
-      icon: Code,
+        "Je développe des interfaces web modernes et réactives avec React, Next.js, Svelte et TypeScript. Côté back-end, j'utilise Node.js et Python pour créer des APIs sécurisées et évolutives. Ma compréhension de l’algorithmie et du C++ me permet d’optimiser les performances et la logique métier.",
     },
     {
-      title: "Design Focus",
+      name: "Database & Storage",
       description:
-        "Je soigne l’expérience visuelle autant que le code. Mon but : créer des interfaces simples, élégantes et bien intégrées.",
-      icon: Figma,
+        "J’architecture des systèmes de données fiables avec MySQL et Prisma, en assurant une bonne structuration, une communication fluide avec le back-end, et une gestion cohérente des données.",
     },
     {
-      title: "Performance",
+      name: "DevOps & Outils",
       description:
-        "J’optimise chaque projet pour qu’il soit rapide, fluide et agréable à utiliser, sur tous les supports.",
-      icon: Power,
+        "J’utilise Docker pour le déploiement en environnement isolé et GitHub pour la gestion de versions et l’intégration continue. Ces outils me permettent d'assurer un workflow fluide, reproductible et collaboratif.",
     },
     {
-      title: "Continuous Learning",
+      name: "Cybersécurité",
       description:
-        "Je reste curieux et à jour sur les technos. Apprendre, tester, progresser — ça fait partie du métier.",
-      icon: Brain,
+        "Je m’initie au hacking éthique à travers Root Me et Hack The Box, avec un intérêt marqué pour l’OSINT, le reverse engineering, et l’exploitation de failles web. Cette pratique m’aide à intégrer une logique sécurité dans tous mes projets.",
     },
   ];
 
   return (
-    <section
-      id="about"
-      className="flex flex-col items-center justify-center gap-8 py-10 px-4"
-    >
-      <h1 className="text-3xl md:text-4xl font-bold uppercase text-white text-center w-full">
-        À propos de moi
-      </h1>
-      <p className="text-lg md:text-xl text-white/80 text-center">
-        Je suis passionné par le développement web et la création de logiciels.
-        J&apos;ai actuellement 4 ans d&apos;expérience dans la création de
-        projet web moderne.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full mt-6 gap-4">
-        <div className="liquid rounded-2xl p-6 flex flex-col items-start w-full gap-4">
-          <h1 className="text-2xl md:text-3xl font-bold text-white">
-            Ma présentation
-          </h1>
-
-          <p className="text-md md:text-lg text-white/80">
-            Je m&apos;appelle Mathieu Forest, j&apos;ai 20 ans et j&apos;étudie
-            actuellement à la <strong>Guardia CyberSecurity School</strong> à
-            Lyon. Depuis petit, l&apos;informatique me passionne — de
-            &quot;comment fonctionne un ordi&quot; à la création de systèmes web
-            et d&apos;outils personnalisés.
-            <br />
-            <br />
-            Aujourd&apos;hui, je me spécialise dans le développement web.
-            J&apos;explore aussi la cybersécurité, le reverse engineering,
-            l&apos;automatisation avec Python, les réseaux, et plus récemment
-            l&apos;OSINT. J&apos;aime le code propre, les interfaces claires, et
-            les projets qui ont du sens. Construire, apprendre, améliorer —
-            c&apos;est ce qui me motive. Et quand je ne suis pas devant mon
-            éditeur, tu me trouveras sûrement en train de jouer, de regarder un
-            match, ou de voyager pour m&apos;inspirer ailleurs.
-            <br />
-            <br />
-            <strong>
-              Discutons ! Que ce soit pour un projet ou une idée technique, je
-              suis toujours partant.
-            </strong>
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center gap-4">
-          {cards.map((item, index) => {
-            return (
-              <div
-                className="border border-primary liquid rounded-2xl p-6 flex items-center gap-4 h-full"
-                key={index}
-              >
-                <div className="p-4 flex items-center">
-                  <item.icon className="h-6 w-6 text-white" />
+    <div className="about">
+      <section id="about" className="about-content">
+        <div className="about-container">
+          <div>
+            <h2>Qui suis-je ?</h2>
+            <p>
+              Salut, je m&apos;appelle Mathieu Forest, développeur web orienté
+              Frontend / Backend, avec une passion pour la cybersécurité.
+            </p>
+            <p>
+              Actuellement étudiant à la{" "}
+              <strong>Guardia CyberSecurity School</strong> à Lyon, je conçois
+              des sites et applications web modernes, intuitifs et performants.
+              J&apos;accorde une grande importance à la qualité de
+              l\&apos;expérience utilisateur et à la cohérence visuelle.
+            </p>
+            <p>
+              Au-delà du développement web, je m&apos;intéresse aussi au reverse
+              engineering, à l&apos;automatisation avec Python, à
+              l&apos;infrastructure réseau, notamment à l&apos;OSINT.
+            </p>
+            <p>
+              J&apos;aime apprendre en continu, partager ce que je découvre, et
+              contribuer à des projets qui ont du sens. Je suis ouvert aux
+              opportunités de collaboration, de stage ou de mission freelance,
+              pour construire, progresser et apporter de la valeur.
+            </p>
+            <p>
+              <strong>Disponible pour de nouveaux projets !</strong> Passionné
+              par les nouvelles technologies et les défis techniques complexes.
+            </p>
+          </div>
+          <div>
+            <h2>Compétences</h2>
+            <div className="about-technologies">
+              {skills.map((skill) => (
+                <div className="about-technology-item" key={skill.name}>
+                  <h3>{skill.name}</h3>
+                  <p>{skill.description}</p>
                 </div>
-                <div className="flex flex-col items-start gap-1">
-                  <h1 className="text-xl font-bold text-white">{item.title}</h1>
-                  <p className="text-sm text-white/80">{item.description}</p>
-                </div>
-              </div>
-            );
-          })}
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

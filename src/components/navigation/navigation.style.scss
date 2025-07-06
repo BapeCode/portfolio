@@ -1,0 +1,155 @@
+@use "../../app/globals.scss" as *;
+
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px 0 20px;
+
+  & > .navigation-icons {
+    display: none;
+  }
+
+  & > .navigation-links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    & > .links-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+
+      & > .links-items {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        & > span {
+          font-size: 22px !important;
+          font-weight: 700;
+          color: $text-bg;
+          transition: all 0.3s ease;
+          text-decoration: none;
+        }
+      }
+
+      & > .links-button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        & > svg {
+          height: 24px;
+          width: 24px;
+        }
+
+        & > button {
+          font-size: 18px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+
+    & > .navigation-icons {
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      & > svg {
+        height: 24px;
+        width: 24px;
+        color: $text-bg-dark;
+      }
+    }
+
+    & > .navigation-links {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 60px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      transform: translateX(100%);
+      opacity: 0;
+      pointer-events: auto;
+      background: $bg-light;
+      z-index: 10;
+      padding: 0 10px;
+
+      &.active {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      & > .links-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+
+        & > .links-items {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 20px;
+
+          & > a {
+            font-size: 22px;
+            color: $text-bg-dark;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 20px;
+
+            &:hover {
+              background: $bg-dark;
+              transform: translateY(-2px);
+            }
+          }
+        }
+
+        & > .links-button {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-top: 20px;
+          height: 100%;
+
+          & > svg {
+            height: 24px;
+            width: 24px;
+          }
+
+          & > button {
+            font-size: 12px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
