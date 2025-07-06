@@ -5,22 +5,22 @@ export default function About() {
     {
       name: "Front-End & Back-End",
       description:
-        "Je développe des interfaces web modernes et réactives avec React, Next.js, Svelte et TypeScript. Côté back-end, j'utilise Node.js et Python pour créer des APIs sécurisées et évolutives. Ma compréhension de l’algorithmie et du C++ me permet d’optimiser les performances et la logique métier.",
+        "Je développe des interfaces web modernes et réactives avec React, Next.js, Svelte et TypeScript. Côté back-end, j'utilise Node.js et Python pour créer des APIs sécurisées et évolutives. Ma compréhension de l'algorithmie et du C++ me permet d'optimiser les performances et la logique métier.",
     },
     {
       name: "Database & Storage",
       description:
-        "J’architecture des systèmes de données fiables avec MySQL et Prisma, en assurant une bonne structuration, une communication fluide avec le back-end, et une gestion cohérente des données.",
+        "J'architecture des systèmes de données fiables avec MySQL et Prisma, en assurant une bonne structuration, une communication fluide avec le back-end, et une gestion cohérente des données.",
     },
     {
       name: "DevOps & Outils",
       description:
-        "J’utilise Docker pour le déploiement en environnement isolé et GitHub pour la gestion de versions et l’intégration continue. Ces outils me permettent d'assurer un workflow fluide, reproductible et collaboratif.",
+        "J'utilise Docker pour le déploiement en environnement isolé et GitHub pour la gestion de versions et l'intégration continue. Ces outils me permettent d'assurer un workflow fluide, reproductible et collaboratif.",
     },
     {
       name: "Cybersécurité",
       description:
-        "Je m’initie au hacking éthique à travers Root Me et Hack The Box, avec un intérêt marqué pour l’OSINT, le reverse engineering, et l’exploitation de failles web. Cette pratique m’aide à intégrer une logique sécurité dans tous mes projets.",
+        "Je m'initie au hacking éthique à travers Root Me et Hack The Box, avec un intérêt marqué pour l'OSINT, le reverse engineering, et l'exploitation de failles web. Cette pratique m'aide à intégrer une logique sécurité dans tous mes projets.",
     },
   ];
 
